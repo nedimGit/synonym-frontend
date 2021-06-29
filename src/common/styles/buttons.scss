@@ -1,0 +1,174 @@
+@import './variables';
+.btn {
+  align-items: center;
+  background-color: var(--secondary-theme-color);
+  border: 0;
+  border: 1px solid transparent;
+  border-radius: 18px;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  font-size: 14px;
+  font-weight: 600;
+  height: 36px;
+  justify-content: center;
+  outline: 0;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.2s all;
+  svg {
+    fill: white;
+    g {
+      fill: white;
+    }
+    path {
+      fill: white;
+    }
+  }
+  &:hover {
+    opacity: 0.7;
+  }
+  &:disabled {
+    background-color: var(--secondary-font-color-light);
+    cursor: not-allowed;
+    opacity: 1;
+  }
+  //colors
+  &.btn-green {
+    background-color: var(--secondary-theme-color);
+    margin: 5px;
+    &:disabled {
+      background-color: var(--secondary-font-color-light);
+      cursor: not-allowed;
+      opacity: 1;
+    }
+  }
+  &.btn-gray {
+    background-color: var(--primary-theme-light-color);
+    border: solid 1px var(--secondary-font-color-dark);
+    color: var(--secondary-font-color-dark);
+    svg {
+      fill: var(--secondary-font-color-dark);
+      g {
+        fill: var(--secondary-font-color-dark);
+      }
+      path {
+        fill: var(--secondary-font-color-dark);
+      }
+    }
+    &:disabled {
+      background-color: var(--secondary-font-color-light);
+      cursor: not-allowed;
+      opacity: 1;
+    }
+  }
+  &.btn-warning {
+    background-color: var(--warning-color);
+    border: solid 1px var(--secondary-font-color-dark);
+    // color: var(--secondary-font-color-light);
+    svg {
+      fill: var(--secondary-font-color-dark);
+      g {
+        fill: var(--secondary-font-color-dark);
+      }
+      path {
+        fill: var(--secondary-font-color-dark);
+      }
+    }
+    &:disabled {
+      background-color: var(--warning-color);
+      cursor: not-allowed;
+      opacity: 1;
+    }
+  }
+  &.btn-white {
+    background-color: var(--primary-font-color);
+    border: solid 1px var(--primary-font-color);
+    color: var(--primary-font-color-dark);
+    svg {
+      fill: var(--primary-font-color-dark);
+      g {
+        fill: var(--primary-font-color-dark);
+      }
+      path {
+        fill: var(--primary-font-color-dark);
+      }
+    }
+    &:disabled {
+      background-color: var(--secondary-font-color-light);
+      cursor: not-allowed;
+      opacity: 0.5;
+    }
+  }
+  &.btn-white-transparent {
+    background-color: transparent;
+    border: solid 1px var(--primary-font-color);
+    color: var(--primary-font-color);
+    svg {
+      fill: var(--primary-font-color-dark);
+      g {
+        fill: var(--primary-font-color-dark);
+      }
+      path {
+        fill: var(--primary-font-color-dark);
+      }
+    }
+    &:disabled {
+      background-color: var(--secondary-font-color-light);
+      cursor: not-allowed;
+      opacity: 1;
+    }
+    &.noborder {
+      border-style: none;
+    }
+  }
+  &.btn-transparent {
+    background-color: transparent;
+  
+    color: var(--primary-font-color);
+    svg {
+      fill: var(--primary-font-color-dark);
+      g {
+        fill: var(--primary-font-color-dark);
+      }
+      path {
+        fill: var(--primary-font-color-dark);
+      }
+    }
+    &:disabled {
+      cursor: not-allowed;
+      opacity: 1;
+    }
+  }
+  
+ 
+
+  //btn size 
+  &.btn-small {
+    min-width: 166px;
+  }
+  &.btn-medium {
+    min-width: 290px;
+  }
+  &.btn-large {
+    width: 100%;
+  }
+
+  // modifiers
+  &.load-more {
+    bottom: 0;
+    left: 50%;
+    margin: 15px auto;
+    margin-left: -80px;
+    padding: 8px 10px;
+    position: absolute;
+  }
+
+  //shapes
+  &.btn-cube {
+    border-radius: 0;
+  }
+  &.auto {
+    margin: auto;
+  }
+}

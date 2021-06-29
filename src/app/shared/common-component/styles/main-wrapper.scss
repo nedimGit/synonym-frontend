@@ -1,0 +1,38 @@
+@import '../../../../common/styles/variables';
+.main-wrapper {
+  align-items: center;
+  display: flex;
+  min-height: 100vh;
+  position: relative;
+  &__background-image {
+    align-items: center;
+    background: url('../assets/world-dark.svg') no-repeat center center fixed;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    height: 80vh;
+    justify-content: center;
+    width: 100%;
+  }
+}
+body[data-theme='dark'] {
+  .main-wrapper {
+    &__background-image {
+      background: url('../assets/world.svg') no-repeat center center fixed;
+    }
+  }
+}
+.generic-container {
+  .logo {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+  }
+  &__wrapper {
+    background-color: white;
+    border-radius: 4px;
+    padding: 20px 30px;
+  }
+  
+}

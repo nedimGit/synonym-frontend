@@ -1,0 +1,16 @@
+{
+  "extends": "stylelint-config-sass-guidelines",
+  "ignoreFiles": ["**/*.js"],
+  "rules":{
+    "max-nesting-depth": 10,
+    "selector-class-pattern": null,
+    "selector-no-qualifying-type": null,
+    "color-named": null,
+    "selector-max-compound-selectors": null,
+    "property-no-vendor-prefix": null,
+    "selector-no-vendor-prefix": null,
+    "selector-max-id": null,
+    "rule-empty-line-before": "never",
+    "property-no-unknown": null,
+  }
+}

@@ -1,0 +1,24 @@
+@import '../../../common/styles/variables';
+
+$title-height: 20px;
+$header-slider-height: 422px;
+
+
+.word-list {
+  padding: 10px;
+  margin: 10px;
+  border: #00ff4c;
+  border-style: double;
+  overflow-x: scroll;
+  overflow-y: scroll;
+  width: 200px;
+  height: 200px;
+}
+
+.list-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+

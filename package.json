@@ -1,0 +1,62 @@
+{
+  "name": "synonyms",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+     "axios": "^0.21.1",
+    "lodash": "^4.17.19",
+    "node-sass": "^4.12.0",
+    "react": "^16.8.6",
+    "react-addons-update": "^15.6.2",
+    "react-autosuggest": "^9.4.3",
+    "react-beforeunload": "^2.1.0",
+    "react-color": "^2.17.3",
+    "react-datepicker": "^2.10.1",
+    "react-dom": "^16.8.6",
+    "react-dropzone": "^10.1.7",
+    "react-redux": "5.1.1",
+    "react-router": "3.0.5",
+    "redux": "^4.0.1",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-form": "^7.4.2",
+    "redux-persist": "^5.10.0",
+    "redux-thunk": "^2.3.0",
+    "styled-components": "^5.1.1"
+  },
+  "devDependencies": {
+    "del-cli": "^3.0.1",
+    "eslint-config-react-app": "^5.0.1",
+    "eslint-plugin-flowtype": "^3.11.1",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "2.6.0",
+    "eslint-plugin-react": "^7.14.2",
+    "eslint-plugin-react-hooks": "^1.6.1",
+    "prettier": "1.12.1",
+    "react-scripts": "^3.4.4",
+    "stylelint": "^13.9.0",
+    "stylelint-config-sass-guidelines": "^6.1.0"
+  },
+  "scripts": {
+    "start": "PORT=7777 REACT_APP_ENV=localhost react-scripts start",
+    "start-win": "SET PORT=7777/ && SET 'REACT_APP_ENV=localhost' && react-scripts start",
+    "build": "react-scripts build",
+    "eject": "react-scripts eject",
+    "test:lint:scss": "stylelint \"src/**/*.scss\"",
+    "fix:lint:scss": "stylelint --fix \"src/**/*.scss\""
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
+
+

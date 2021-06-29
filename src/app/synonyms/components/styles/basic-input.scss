@@ -1,0 +1,142 @@
+@import '../../../../common/styles/variables';
+.word-input {
+  //disable scroll on input type number
+  input[type='number']::-webkit-outer-spin-button,
+ 
+  input[type='number']::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type='number'] {
+    -moz-appearance: textfield;
+  }
+  &.hidden-field {
+    display: none;
+    visibility: hidden;
+  }
+  .label-container {
+    display: flex;
+    justify-content: space-between;
+    &__icon {
+      cursor: pointer;
+      opacity: 0;
+      transition: all 0.3s ease;
+      &:hover {
+        fill: var(--secondary-theme-color);
+        g {
+          fill: var(--secondary-theme-color);
+        }
+        path {
+          fill: var(--secondary-theme-color);
+        }
+      }
+      &.danger {
+        &:hover {
+          fill: var(--validation-error-color);
+          g {
+            fill: var(--validation-error-color);
+          }
+          path {
+            fill: var(--validation-error-color);
+          }
+        }
+      }
+      &:active {
+        fill: var(--primary-font-color);
+        g {
+          fill: var(--primary-font-color);
+        }
+        path {
+          fill: var(--primary-font-color);
+        }
+      }
+      &--active {
+        opacity: 1;
+      }
+      &:not(:last-child) {
+        margin-right: 5px;
+      }
+    }
+  }
+  &__label {
+    font-size: 12px;
+    font-weight: normal;
+    margin-bottom: 16px;
+    &.sublabel {
+      display: inline-block;
+      font-weight: lighter;
+      margin: 10px 0 20px;
+      width: 100%;
+    }
+    &--input {
+      .input {
+        background-color: transparent;
+        border: 0;
+        color: var(--secondary-font-color-dark);
+        font-family: $primary-font-family;
+        font-size: 12px;
+        font-weight: normal;
+        outline: none;
+        width: 100%;
+      }
+    }
+  }
+  .border {
+    border-bottom: 1px solid var(--box-items-separator-color);
+    transition: border 0.2s ease;
+  }
+  .invalid {
+    border-bottom: 1px solid var(--validation-error-color);    
+  }
+  &__input-wrapper {
+    .hidden {
+      display: none;
+    } 
+    .input {
+      background-color: transparent;
+      border: 0;
+      font-family: $primary-font-family;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: normal;
+      outline: none;
+      padding: 8px 0;
+      width: 100%;
+    }
+    input[disabled] {
+      cursor: not-allowed;
+    }
+  }
+  .input-wrapper {
+    textarea {
+      background: transparent;
+      border: 0;
+      border-bottom: 1px solid var(--box-items-separator-color);
+      color: var(--primary-font-color);
+      font-family: $primary-font-family;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: normal;
+      outline: none;
+      padding: 5px;
+      width: 100%;
+    }
+  }
+  .error-message {
+    min-height: 25px;
+    padding: 0;
+    transition: min-height 0.2s ease;
+    visibility: hidden;
+    &--visible {
+      color: var(--validation-error-color);
+      font-size: 12px;
+      min-height: 25px;
+      padding: 5px 0;
+      transition: min-height 0.2s ease;
+      visibility: visible;
+      &::first-letter {
+        text-transform: capitalize;
+      }
+    }
+  }
+}

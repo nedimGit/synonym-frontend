@@ -1,0 +1,129 @@
+@import '../../../common/styles/variables';
+.items-renderer {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  position: relative;
+  &__container {
+    flex: 1;
+    overflow: auto;
+  }
+  .empty-state {
+    display: flex;
+    justify-content: center;
+    padding: 100px 0;
+    &__wrapper {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      width: 90%;
+    }
+    &__icon {
+      margin-bottom: 15px;
+    }
+    &__title {
+      margin-bottom: 15px;
+    }
+    &__desc {
+      font-size: 12px;
+    }
+  }
+  .tools {
+    display: flex;
+    margin-bottom: 20px;
+    min-height: 40px;
+    &__icon {
+      cursor: pointer;
+      height: 16px;
+      transition: all 0.2s ease;
+      width: 16px;
+      &:hover {
+        fill: var(--primary-font-color);
+        g {
+          fill: var(--primary-font-color);
+        }
+        path {
+          fill: var(--primary-font-color);
+        }
+      }
+      &.active {
+        fill: var(--primary-font-color);
+        g {
+          fill: var(--primary-font-color);
+        }
+        path {
+          fill: var(--primary-font-color);
+        }
+      }
+    }
+  }
+  .grouping-items {
+    display: flex;
+    margin-right: auto;
+    > * {
+      margin-right: 10px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  .rest-items {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+    > * {
+      cursor: pointer;
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+    }
+  }
+  .section-title {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0 10px;
+    h5 {
+      max-width: 50%;
+    }
+  }
+  .item {
+    align-items: center;
+    border-bottom: 1px solid var(--box-items-separator-color);
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    margin-bottom: 10px;
+    padding: 8px;
+    transition: all 0.3s ease;
+    &:hover {
+      border-bottom: 1px solid var(--secondary-theme-color);
+    }
+    &.hovered {
+      border-bottom: 1px solid var(--secondary-theme-color);
+    }
+    &.selected {
+      border-bottom: 1px solid var(--secondary-theme-color);
+      p {
+        color: var(--primary-font-color);
+      }
+    }
+    p {
+      flex: 1;
+      margin-right: 8px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+  &__loader {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+  }
+}

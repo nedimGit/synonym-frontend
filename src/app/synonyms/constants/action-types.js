@@ -1,0 +1,15 @@
+export default {
+  GET_ALL_WORDS: 'getAllWords',
+  SET_ALL_WORDS: 'setAllWords',
+  SET_WORDS: 'setWords',
+  GET_SYNONYMS: 'getSynonymsForWord',
+  SET_SYNONYMS: 'setSynonyms',
+  ADD_WORD: 'addWord',
+  SET_WORD: 'setWord',
+  REPLACE_WORD: 'replaceWord',
+  REMOVE_WORD: 'removeWord',
+  ADD_SYNONYM: 'addSynonym',
+  SET_SYNONYM: 'setSynonym',
+  UPDATE_SYNONYM: 'updateSynonym',
+  DELETE_SYNONYM: 'deleteSynonym',
+};

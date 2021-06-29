@@ -1,0 +1,28 @@
+
+.colors-container {
+  display: flex;
+  flex-direction: column;
+  .label {
+    margin-bottom: 10px;
+  }
+  .colors-wrapper {
+    align-items: center;
+    display: flex;
+    margin-bottom: 16px;
+    &__color {
+      background-clip: content-box;
+      border-radius: 50%;
+      cursor: pointer;
+      height: 16px;
+      padding: 2px;
+      transition: all 0.2s ease;
+      width: 16px;
+      &:not(:last-child) {
+        margin-right: 3px;
+      }
+      &--disabled {
+        cursor: default;
+      }
+    }
+  }
+}

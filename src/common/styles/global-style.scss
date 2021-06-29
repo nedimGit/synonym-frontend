@@ -1,0 +1,430 @@
+@import './variables';
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Michroma&display=swap');
+@import './buttons';
+* {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: var(--primary-theme-light-color);
+  box-sizing: border-box;
+  color: var(--default-font-color);
+
+  // default font settings
+  font-family: $primary-font-family;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: normal;
+}
+h1 {
+  color: var(--default-font-color);
+  font-family: $primary-font-family;
+  font-size: 56px;
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: normal;
+  line-height: normal;
+}
+h2 {
+  color: var(--default-font-color);
+  font-family: $primary-font-family;
+  font-size: 42px;
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: normal;
+  line-height: normal;
+}
+h3 {
+  color: var(--default-font-color);
+  font-family: $primary-font-family;
+  font-size: 34px;
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: normal;
+  line-height: normal;
+}
+h4 {
+  color: var(--default-font-color);
+  font-family: $primary-font-family;
+  font-size: 24px;
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: normal;
+  line-height: normal;
+}
+h5 {
+  color: var(--default-font-color);
+  font-family: $primary-font-family;
+  font-size: 20px;
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: normal;
+  line-height: normal;
+}
+h6 {
+  color: var(--default-font-color);
+  font-family: $primary-font-family;
+  font-size: 15px;
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: normal;
+  line-height: normal;
+}
+p {
+  color: var(--default-font-color);
+  font-family: $primary-font-family;
+  font-size: 14px;
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: normal;
+  line-height: normal;
+}
+label {
+  color: var(--secondary-font-color-dark);
+  font-family: $primary-font-family;
+  font-size: 13px;
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: normal;
+  line-height: normal;
+}
+ol {
+  list-style-position: inside;
+  list-style-type: decimal;
+}
+.f-primary {
+  color: var(--primary-font-color);
+}
+.f-secondary-dark {
+  color: var(--secondary-font-color-dark);
+}
+.f-secondary-light {
+  color: var(--secondary-font-color-light);
+}
+.f-secondary-green {
+  color: var(--secondary-theme-color);
+}
+.f-secondary-red {
+  color: var(--validation-error-color);
+}
+.f-warning {
+  color: var(--warning-color);
+}
+.f-white {
+  color: white;
+}
+table {
+  td,
+  th {
+    font-family: Montserrat;
+    font-size: 14px;
+    font-stretch: normal;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: normal;
+    padding: 10px 5px;
+    text-align: left;
+  }
+  thead {
+    tr {
+      color: var(--secondary-theme-color);
+    }
+  }
+  tbody {
+    tr {
+      color: var(--secondary-font-color-light);
+      &:first-child {
+        td {
+          padding-top: 15px;
+        }
+      }
+    }
+  }
+}
+
+// SVG FILL
+// it will apply on g
+.svg-primary-g {
+  g {
+    fill: var(--secondary-theme-color);
+  }
+  path {
+    fill: var(--secondary-theme-color);
+  }
+  circle {
+    fill: var(--secondary-theme-color);
+  }
+}
+.svg-black-g {
+  g {
+    fill: var(--default-font-color);
+  }
+  path {
+    fill: var(--default-font-color);
+  }
+  circle {
+    fill: var(--default-font-color);
+  }
+}
+.svg-white-g {
+  g {
+    fill: var(--primary-font-color);
+  }
+  path {
+    fill: var(--primary-font-color);
+  }
+  circle {
+    fill: var(--primary-font-color);
+  }
+}
+.svg-gray-g {
+  g {
+    fill: var(--secondary-font-color-dark);
+  }
+  path {
+    fill: var(--secondary-font-color-dark);
+  }
+  circle {
+    fill: var(--secondary-font-color-dark);
+  }
+}
+.svg-warning-g {
+  g {
+    fill: var(--warning-color);
+  }
+  path {
+    fill: var(--warning-color);
+  }
+  circle {
+    fill: var(--warning-color);
+  }
+}
+//it will apply on svg
+.svg-primary {
+  fill: var(--secondary-theme-color);
+}
+.svg-black {
+  fill: var(--default-font-color);
+}
+.svg-white {
+  fill: var(--primary-font-color);
+}
+.svg-gray {
+  fill: var(--secondary-font-color-dark);
+}
+.svg-warning {
+  fill: var(--warning-color);
+}
+
+// SVG STROKE
+// it will apply on g
+.stroke-primary-g {
+  g {
+    stroke: var(--secondary-theme-color);
+  }
+  path {
+    stroke: var(--secondary-theme-color);
+  }
+}
+.stroke-black-g {
+  g {
+    stroke: var(--default-font-color);
+  }
+  path {
+    stroke: var(--default-font-color);
+  }
+}
+.stroke-white-g {
+  g {
+    stroke: var(--primary-font-color);
+  }
+  path {
+    stroke: var(--primary-font-color);
+  }
+}
+.stroke-gray-g {
+  g {
+    stroke: var(--secondary-font-color-dark);
+  }
+  path {
+    stroke: var(--secondary-font-color-dark);
+  }
+}
+//it will apply on svg
+.stroke-primary {
+  stroke: var(--secondary-theme-color);
+}
+.stroke-black {
+  stroke: var(--default-font-color);
+}
+.stroke-white {
+  stroke: var(--primary-font-color);
+}
+.stroke-gray {
+  stroke: var(--secondary-font-color-dark);
+}
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+//logo color
+.navigation-container,
+.generic-container {
+  .logo svg #Group-4 path:first-child {
+    fill: var(--logo-color);
+  }
+}
+.beta {
+  color: red !important;
+  pointer-events: none;
+  position: relative;
+  text-decoration: line-through !important;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
+  &::before {
+    background-color: rgba(0, 0, 0, 0.1);
+    bottom: 0;
+    color: red;
+    content: 'beta';
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 1000;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: -14px;
+    width: 100%;
+  }
+}
+.new-badge {
+  position: relative;
+  user-select: none;
+  &::before {
+    background-color: var(--secondary-theme-color);
+    border-radius: 6px;
+    color: var(--default-font-color);
+    content: 'NEW';
+    font-size: 6px;
+    font-weight: bold;
+    padding: 1px 5px;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(100%, -50%);
+  }
+}
+.new-badge-md {
+  position: relative;
+  user-select: none;
+  &::before {
+    background-color: var(--secondary-theme-color);
+    border-radius: 6px;
+    color: var(--default-font-color);
+    content: 'NEW';
+    font-size: 8px;
+    font-weight: bold;
+    padding: 2px 5px;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(-50%, -50%);
+  }
+}
+.coming-soon,
+.coming-soon-md {
+  background-color: rgba(0, 0, 0, 0.1);
+  cursor: not-allowed;
+  pointer-events: none;
+  position: relative;
+  user-select: none;
+  ::before {
+    background-color: var(--secondary-theme-color);
+    border-radius: 6px;
+    color: var(--default-font-color);
+    content: 'SOON';
+    font-size: 6px;
+    font-weight: bold;
+    left: 0;
+    padding: 1px 5px;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    transform: translate(60%, -20%);
+  }
+}
+.coming-soon-md {
+  &::before {
+    font-size: 8px;
+    font-weight: bold;
+    padding: 2px 5px;
+  }
+}
+.link {
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline;
+  }
+  &--disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}
+.hidden-content {
+  display: none !important;
+  visibility: hidden;
+}
+.auto-scroll {
+  overflow: auto;
+}
+::-webkit-scrollbar {
+  background-color: rgba(0, 0, 0, 0);
+  -webkit-border-radius: 100px;
+  border-radius: 100px;
+  height: $scrollbar-size-default;
+  width: $scrollbar-size-default;
+}
+::-webkit-scrollbar:hover {
+  background-color: rgba(0, 0, 0, 0.09);
+}
+::-webkit-scrollbar-track {
+  background-color: transparent;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(78, 78, 78, 0.5);
+  -webkit-border-radius: 100px;
+  border-radius: 100px;
+}
+::-webkit-scrollbar-thumb:active {
+  background: rgba(var(--secondary-theme-color-dark-rgb), 0.5);
+  -webkit-border-radius: 100px;
+  border-radius: 100px;
+}
+.bold {
+  font-weight: bold;
+}
+
+//legend-color
+

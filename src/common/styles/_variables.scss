@@ -1,0 +1,27 @@
+@import './theme-files/light-theme';
+body[data-theme='light'],
+body {
+  @each $label, $value, $i in $light-theme {
+    #{$label}: #{$value};
+  }
+}
+
+
+
+// FONTS
+
+$primary-font-family: 'Montserrat';
+// ELEMENT SIZE
+
+//dimension constants
+@import './dimensions/dimensions';
+
+
+
+
+
+
+
+
+
+

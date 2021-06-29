@@ -1,0 +1,51 @@
+$light-theme: ( 
+  (--primary-theme-light-color, #efeff2, primaryThemeColor),
+  (--primary-theme-dark-color, #1c1e1f, primaryThemeDarkColor),
+  (--secondary-theme-color, #58b895, secondaryThemeColor), // changing this variable, take rgb values and apply below),
+  (--secondary-theme-color-rgb, (88, 184, 149), secondaryThemeColorRgb),
+  (--secondary-theme-color-dark, #3b9a78, secondartyThemeColorDark), // changing this variable, take rgb values and apply below
+  (--secondary-theme-color-dark-rgb, (58, 155, 121), secondaryThemeColorDargRgb),
+  (--navigation-border-color, #dee3e9, navigationBorderColor),
+  (--box-items-theme-color, #fdfdfd, boxItemsThemeColor),
+  (--box-items-theme-color-light, #f0f0f0, boxItemsThemeColorLight), // changing this variable, take rgb values and apply below
+  (--box-items-theme-color-light-rgb, (240, 240, 240), boxItemsThemeColorLightRgb),
+  (--upload-box-item-color, #ddd, uploadBoxItemColor),
+  (--box-items-separator-color, #e5e7e8, boxItemsSeparatorColor),
+  (--toggle-background-color, #e5e7e8, toggleBackgroundColor),
+  (--background-color, #f9fafb, bacgroundColor),
+  (--background-color-light, #EBECF0, bacgroundColorLight),
+  (--background-color-rgb, (249, 250, 251), bacgroundColorRgb),
+  (--validation-error-color, #c03, validationErrorColor),
+  (--warning-color, #d17d21, warningColor),
+  (--status-blue-color, #2150d1, warningColor),
+
+  (--secondary-font-color-light, #000, secondaryFontColorLight),
+  (--default-font-color, #000, defaultFontColor),
+  (--primary-font-color, #000, primaryFontColor),
+  (--primary-font-color-dark, white, primaryFontColorDark),
+  (--primary-font-color-rgb, (0, 0, 0), primaryFontColorDarkRgb),
+  (--secondary-font-color-dark, #98a2ad, sexondaryFontColorDark),
+  (--separator-color, #e5e7e8, separatorColor),
+
+  (--logo-color, #000, logoColor),
+  (--modal-color, #fdfdfd, modalColor),
+  (--filter-blocked, #e3e5e7, filterBlocked),
+  (--filter-color, #000, filterColor),
+
+  (--slider-empty-state, #98a2ad, sliderEmptyState),
+
+  (--severity-green, #00c282, severityGreen),
+  (--severity-yellow, #e5e500, severityYellow),
+  (--severity-orange, #ffa500, severityOrange),
+  (--severity-red, #c03, severityRed),
+
+  (--marker-inner, #515255, markerInner),
+  (--marker-outer, #98a2ad, markerOuter),
+  
+  (--logo-background,#e9ebed, logoBackground),
+);
+:export { @each $label, $value, $propName, $i in $light-theme {
+    #{$propName}: #{$value};
+  };
+}
+
